@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* CSS */
+
+* {
+    box-sizing: border-box;
+    color: rgb(175, 175, 175);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    height: 80px;
+}
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 80px;
+    z-index: 1;
+}
+
+.topnav {
+    backdrop-filter: blur(1px);
+    border-bottom: 1px solid rgb(87, 87, 87);
+    width: auto;
+    height: 80px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.topnav a {
+    float: left;
+    /* display: block; */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 8;
+    align-items: start;
+}
+
+.topnav a:hover {
+    color: rgb(255, 255, 255);
+}
+
+#page-navigation {
+    float: right;
+    /* Give some gap */
+    margin-right: 100px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#page-navigation a {
+    opacity: 0.5;
+    animation-name: reverse;
+    animation-duration: 1s;
+}
+
+#page-navigation a:hover {
+    opacity: 1;
+    animation-name: myanimation;
+    animation-duration: 0.2s;
+}
+
+.logo {
+    animation-name: load-animation;
+    animation-duration: 1s;
+    margin-left: 10px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    offset-anchor: 50% 50%;
+}
+
+.logo img:hover {
+    animation-duration: 100ms;
+    /* transform: scale(0.9); */
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    transition: 0.1s all ease 0s;
+    -webkit-transition: 0.1s all ease 0s;
+    -moz-transition: 0.1s all ease 0s;
+    -ms-transition: 0.1s all ease 0s;
+}
+
+#c {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+
+/* Mid Text */
+
+.mid-text {
+    position: relative;
+    top: 25vh;
+    /* transform: translateY(50%); */
+    text-align: center;
+    font-family: 'Poppins', monospace;
+    color: white;
+    /* Disable user select */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+h1 {
+    animation-name: load-animation;
+    animation-duration: 1s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 120px;
+    color: white;
+}
+
+h2 {
+    animation-name: load-animation;
+    animation-duration: 1s;
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 28px;
+    color: white;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 100vw;
+    /*Center the images*/
+    display: flex;
+    justify-content: center;
+    /* Disable user select */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+@keyframes myanimation {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes reverse {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+.social-icons li {
+    margin: 0 30px;
+    opacity: 0.5;
+    animation-name: reverse;
+    animation-duration: 1s;
+}
+
+.social-icons li:hover {
+    opacity: 1;
+    animation-name: myanimation;
+    animation-duration: 0.2s;
+}
+
+ul.social-icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes load-animation {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+canvas {
+    animation-name: load-animation;
+    animation-duration: 1s;
+}
